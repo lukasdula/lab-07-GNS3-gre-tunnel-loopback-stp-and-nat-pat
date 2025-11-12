@@ -236,7 +236,7 @@ The WAN and addressing configuration establishes a functional IP structure betwe
 
 ---
 
-**Next part:** 
+**Next part:**[GRE Tunnel and Loopback Configuration](02-gre-tunnel-and-loopback-configuration.md)
 
 
 
