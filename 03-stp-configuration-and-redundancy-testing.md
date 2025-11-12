@@ -163,4 +163,4 @@ This chapter validated the stability and resilience of STP under normal and fail
 
 ---
 
-Next part: 
+**Next part:** [NAT and PAT Configuration and Verification](04-nat-and-pat-configuration-and-verification.md)
