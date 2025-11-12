@@ -331,7 +331,7 @@ This chapter establishes a logical GRE connection between both branch routers th
 
 ---
 
-Next part:
+**Next part:** [STP Configuration and Redundancy Testing](03-stp-configuration-and-redundancy-testing.md)
 
 
 
