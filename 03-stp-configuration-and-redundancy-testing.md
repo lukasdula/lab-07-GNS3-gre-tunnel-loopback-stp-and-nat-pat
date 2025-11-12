@@ -141,7 +141,7 @@ show spanning-tree vlan 1
 After shutting down interface Gi0/2, the previously blocked port Gi0/3 automatically transitions to the Forwarding state as it becomes the new Root Port. STP recalculates the topology and restores full connectivity between SW1 and SW2 through the backup link. The network remains stable with no broadcast loops or interruptions in communication, confirming that STP failover is functioning correctly.
 
 
-> **Notes.:**This test demonstrates STP redundancy and failover capability. When the active link (Gi0/2) fails, the alternate link (Gi0/3) becomes active to maintain the network topology.  
+> **Notes.:** This test demonstrates STP redundancy and failover capability. When the active link (Gi0/2) fails, the alternate link (Gi0/3) becomes active to maintain the network topology.  
 > Recovery time depends on STP timers (listening, learning, forwarding) and typically takes 30–50 seconds in standard STP mode.
 
 
