@@ -26,13 +26,13 @@ The objectives are:
 
 ## **Lab Structure**
 
-1. WAN and Addressing Setup
+1. [WAN and Addressing Setup](01-wan-and-addressing-setup.md)
     
-2. GRE Tunnel and Loopback Configuration
+2. [GRE Tunnel and Loopback Configuration](02-gre-tunnel-and-loopback-configuration.md)
     
-3. STP Configuration and Redundancy Testing
+3. [STP Configuration and Redundancy Testing](03-stp-configuration-and-redundancy-testing.md)
     
-4. NAT and PAT Configuration and Verification
+4. [NAT and PAT Configuration and Verification](04-nat-and-pat-configuration-and-verification.md)
     
 
 
