@@ -1,5 +1,5 @@
 
-# **1 WAN and Addressing Setup**
+# **1 - WAN and Addressing Setup**
 
 ## **1.1 Introduction**
 
