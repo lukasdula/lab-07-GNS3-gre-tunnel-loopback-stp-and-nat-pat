@@ -1,4 +1,4 @@
-## **2 GRE Tunnel and Loopback Configuration**
+## **2 - GRE Tunnel and Loopback Configuration**
 
 ## **2.1 Introduction**
 
