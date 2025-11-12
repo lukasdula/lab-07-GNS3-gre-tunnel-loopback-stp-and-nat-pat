@@ -38,7 +38,7 @@ In this lab, SW1 acts as the root bridge for VLAN communication within the branc
     
 4. Record spanning-tree outputs for documentation and verification.
 
-## **3.4 Enable STP on both switches****
+## **3.4 Enable STP on both switches**
 
 
 Verify that Spanning Tree Protocol (STP) is active on both access switches (SW1 and SW2) to prevent potential switching loops before redundancy testing.
