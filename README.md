@@ -1,4 +1,4 @@
-# **GRE Tunnel, STP, and NAT/PAT**
+# **GRE Tunnel, STP, Loopback, and NAT/PAT**
 
 ## **Introduction and Objectives**
 
