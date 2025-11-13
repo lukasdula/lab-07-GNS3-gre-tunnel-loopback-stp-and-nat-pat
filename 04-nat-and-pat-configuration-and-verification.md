@@ -168,4 +168,4 @@ The NAT and PAT configuration on router R1 allows devices in Branch-A to access 
 
 ---
 
-**Back to project overview:** [README](README.md)
+**Back to lab overview:** [README](README.md)
