@@ -1,6 +1,7 @@
 
 # **1 - WAN and Addressing Setup**
 
+<br><br>
 ## **1.1 Introduction**
 
 This chapter defines the IP addressing for all core network devices, including routers, the ISP node, and end hosts. It establishes the basic communication backbone between both branches and the service provider. Each router receives WAN and LAN interfaces, while switches and PCs are connected to their respective segments. The addressing plan ensures clear separation between local and transit networks, preparing the foundation for the following GRE tunnel and loopback configuration.
@@ -8,6 +9,7 @@ This chapter defines the IP addressing for all core network devices, including r
 
 ![](images/Pasted%20image%2020251112144036.png)
 
+<br><br>
 
 ## **1.2 Topology**
 
@@ -22,6 +24,7 @@ This chapter defines the IP addressing for all core network devices, including r
 | **PC1 / PC2** | e0<br>e0                         | Branch-A LAN (via SW1)<br>Branch-A LAN (via SW2)                                            | 192.168.10.10<br>192.168.10.20 | 255.255.255.0<br>255.255.255.0     | 192.168.10.1<br>192.168.10.1 | End host<br>End host                                                   |
 | **PC3**       | e0                               | Branch-B LAN (via SW3)                                                                      | 192.168.20.10                  | 255.255.255.0                      | 192.168.20.1                 | End host                                                               |
 
+<br><br>
 
 ## **1.3 Steps**
 
@@ -35,9 +38,7 @@ This chapter defines the IP addressing for all core network devices, including r
     
 5. Perform basic ping and show-command diagnostics between key devices (PCs, routers, and WAN links).
 
-
-
-
+<br><br>
 
 ## **1.4 PCs - IP Address Configuration**
 
@@ -89,6 +90,8 @@ save
 > The gateway 192.168.10.1 is assigned to interface Gi0/0 on router R1, which provides Layer 3 routing from the LAN to other networks.  
 > Different gateways would be required only if PC1 and PC2 were placed in separate VLANs, meaning different IP subnets.
 
+<br><br>
+
 ## **1.5 Router (R1) - IP Address Configuration**
 
 This section assigns IP addresses to R1 interfaces. The LAN interface provides connectivity for Branch-A internal devices, while the WAN interface connects to the ISP network. This configuration forms the base for inter-branch communication.
@@ -119,6 +122,8 @@ write memory
 ```
 ![](images/Pasted%20image%2020251112024355.png)
 
+<br><br>
+
 ## **1.6 Router (R2) - IP Address Configuration**
 
 This section assigns IP addresses to R2 interfaces. The LAN interface provides connectivity for Branch-B internal devices, while the WAN interface connects to the ISP network. This configuration completes the addressing setup for both branches, allowing interconnection through the ISP.
@@ -147,6 +152,8 @@ end
 write memory
 ```
 ![](images/Pasted%20image%2020251112025223.png)
+
+<br><br>
 
 ## **1.7 Router (ISP) - IP Address Configuration**
 
@@ -177,7 +184,7 @@ write memory
 ```
 ![](images/Pasted%20image%2020251112025906.png)
 
-
+<br><br>
 
 ## **1.8 Network Diagnostics and Connectivity Tests**
 
@@ -229,6 +236,7 @@ ping 192.168.20.1
 
 > **Notes.:** Ping from PC2 to the gateway (192.168.10.1) is also successful. Spanning Tree Protocol (STP) is not yet active, so both links between SW1 and SW2 remain operational until configured in the next section.
 
+<br><br>
 
 ## 1.9 **Conclusion**
 
