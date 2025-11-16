@@ -1,5 +1,7 @@
 ## **2 - GRE Tunnel and Loopback Configuration**
 
+<br><br>
+
 ## **2.1 Introduction**
 
 This chapter focuses on establishing a GRE tunnel between Branch-A and Branch-B through the ISP network. The tunnel creates a secure logical link allowing internal LANs from both branches to communicate as if they were part of the same extended network. Loopback interfaces are configured on each router to serve as stable virtual endpoints for testing. Static routes (ip route) are also implemented to enable reachability between LAN and loopback networks across the GRE tunnel.
@@ -7,6 +9,7 @@ This chapter focuses on establishing a GRE tunnel between Branch-A and Branch-B 
 
 ![](images/Pasted%20image%2020251112173156.png)
 
+<br><br>
 
 ## **2.2 Topology**
 
@@ -21,7 +24,7 @@ This chapter focuses on establishing a GRE tunnel between Branch-A and Branch-B 
 | **PC1 / PC2** | e0<br>e0                         | Branch-A LAN (via SW1)<br>Branch-A LAN (via SW2)                                            | 192.168.10.10<br>192.168.10.20 | 255.255.255.0<br>255.255.255.0     | 192.168.10.1<br>192.168.10.1 | End host<br>End host                                                   |
 | **PC3**       | e0                               | Branch-B LAN (via SW3)                                                                      | 192.168.20.10                  | 255.255.255.0                      | 192.168.20.1                 | End host                                                               |
 
-
+<br><br>
 
 ## 2.3 **Steps**
 
@@ -35,7 +38,7 @@ This chapter focuses on establishing a GRE tunnel between Branch-A and Branch-B 
     
 5. Verify tunnel status, routing table entries, and connectivity using diagnostic commands and ping tests between branch networks.
 
-
+<br><br>
 
 ## **2.4 Loopback Interfaces Configuration**
 
@@ -75,7 +78,7 @@ write memory
 
 > **Notes.:** The configured loopback interfaces serve as logical and stable test points for GRE tunnel verification. They are not used as tunnel source or destination in this setup and do not act as backup links. GRE tunnels currently rely on the WAN physical interfaces for connectivity.
 
-
+<br><br>
 
 ## 2.5 GRE Tunnel Configuration
 
@@ -120,7 +123,7 @@ write memory
 
 > **Notes.:** The GRE tunnel uses the WAN physical IP addresses as the source and destination. It forms a logical point-to-point link between R1 and R2 through the ISP network, allowing inter-branch communication independent of the physical topology.
 
-
+<br><br>
 
 ## **2.6 Static Routes Configuration**
 
@@ -155,6 +158,8 @@ exit
 write memory
 ```
 ![](images/Pasted%20image%2020251112160413.png)
+
+<br><br>
 
 ## **2.7 Troubleshooting GRE Connectivity**
 
@@ -192,7 +197,7 @@ These host routes allow each router to reach the remote GRE destination via the 
 
 > **Notes.:** Host routes (/32) are used for the GRE endpoint IPs because each router must reach only a single remote11 address — the WAN IP of the opposite router. Using a full network route (/30) is unnecessary, as the ISP already connects both subnets. In contrast, LAN and loopback routes use their full subnet masks to cover entire networks.
 
-
+<br><br>
 
 ## **2.8 GRE and Loopback Diagnostics**
 
@@ -240,7 +245,7 @@ ping 172.16.0.1
 
 Both pings are successful, confirming symmetric connectivity across the tunnel.
 
-
+<br><br>
 
 ## 2.9 **Interface and Tunnel Verification**
 
@@ -324,6 +329,7 @@ ping 192.168.10.10
 
 Both ping tests are successful, confirming complete network connectivity between branches
 
+<br><br>
 
 ## 2.10 **Conclusion**
 
