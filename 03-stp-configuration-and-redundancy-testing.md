@@ -1,6 +1,6 @@
-
-
 # **3 - STP Configuration and Redundancy Testing**
+
+<br><br>
 
 ## **3.1 Introduction**
 
@@ -12,6 +12,7 @@ In this lab, SW1 acts as the root bridge for VLAN communication within the branc
 
 ![](images/Pasted%20image%2020251112192424.png)
 
+<br><br>
 
 ## **3.2 Topology**
 
@@ -26,6 +27,7 @@ In this lab, SW1 acts as the root bridge for VLAN communication within the branc
 | **PC1 / PC2** | e0<br>e0                         | Branch-A LAN (via SW1)<br>Branch-A LAN (via SW2)                                            | 192.168.10.10<br>192.168.10.20 | 255.255.255.0<br>255.255.255.0     | 192.168.10.1<br>192.168.10.1 | End host<br>End host                                                   |
 | **PC3**       | e0                               | Branch-B LAN (via SW3)                                                                      | 192.168.20.10                  | 255.255.255.0                      | 192.168.20.1                 | End host                                                               |
 
+<br><br>
 
 ## 3.3 Steps
 
@@ -73,6 +75,7 @@ Output confirms PVST mode is active. All four ports of VLAN0001 are in _Forwardi
 > This verification ensures that both switches are actively participating in the Spanning Tree process before root bridge configuration.  
 > No manual mode change (`spanning-tree mode pvst`) is required since PVST is the default operational mode on Cisco IOS.
 
+<br><br>
 
 ## **3.5 Set SW1 as the root bridge**
 
@@ -112,8 +115,7 @@ SW1 is elected as the Root Bridge for VLAN0001. Bridge ID priority now shows 409
 
 >**Notes.:** The displayed bridge priority of 4097 is not an error. Cisco adds the VLAN ID (1) to the configured priority (4096) because of the Extended System ID feature. The actual bridge priority remains 4096, but it appears as 4097 in STP outputs when VLAN 1 is included.
 
-
-
+<br><br>
 
 ## **3.6 Test link redundancy and failover**
 
@@ -144,6 +146,7 @@ After shutting down interface Gi0/2, the previously blocked port Gi0/3 automatic
 > **Notes.:** This test demonstrates STP redundancy and failover capability. When the active link (Gi0/2) fails, the alternate link (Gi0/3) becomes active to maintain the network topology.  
 > Recovery time depends on STP timers (listening, learning, forwarding) and typically takes 30–50 seconds in standard STP mode.
 
+<br><br>
 
 ## **3.7 Conclusion**
 
