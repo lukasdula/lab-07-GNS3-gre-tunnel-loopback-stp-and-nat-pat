@@ -40,6 +40,8 @@ In this lab, SW1 acts as the root bridge for VLAN communication within the branc
     
 4. Record spanning-tree outputs for documentation and verification.
 
+<br><br>
+
 ## **3.4 Enable STP on both switches**
 
 
