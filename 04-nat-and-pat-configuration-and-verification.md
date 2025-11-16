@@ -1,11 +1,14 @@
 # **4 - NAT and PAT Configuration and Verification**
 
+<br><br>
 
 ## **4.1 Introduction**
 
 Network Address Translation (NAT) and Port Address Translation (PAT) are used to allow private IP addresses from internal networks to access external networks such as the internet. NAT converts private IP addresses into public ones, while PAT extends this by allowing multiple internal devices to share a single public address through different port numbers. In this demonstration, NAT and PAT are configured only on router **R1** for Branch-A to show the translation process between the internal LAN and the ISP network. The GRE tunnel and Branch-B router (R2) remain unaffected by this configuration.
 
 ![](images/Pasted%20image%2020251112201555.png)
+
+<br><br>
 
 ## **4.2 Topology**
 
@@ -20,7 +23,7 @@ Network Address Translation (NAT) and Port Address Translation (PAT) are used to
 | **PC1 / PC2** | e0<br>e0                         | Branch-A LAN (via SW1)<br>Branch-A LAN (via SW2)                                            | 192.168.10.10<br>192.168.10.20 | 255.255.255.0<br>255.255.255.0     | 192.168.10.1<br>192.168.10.1 | End host<br>End host                                                   |
 | **PC3**       | e0                               | Branch-B LAN (via SW3)                                                                      | 192.168.20.10                  | 255.255.255.0                      | 192.168.20.1                 | End host                                                               |
 
-
+<br><br>
 
 ## 4.3 **Steps**
 
@@ -33,7 +36,7 @@ Network Address Translation (NAT) and Port Address Translation (PAT) are used to
     
 4. Perform diagnostic verification and testing of NAT and PAT operation.
     
-
+<br><br>
 
 ## **4.4 NAT and PAT Configuration and Verification**
 
@@ -73,6 +76,7 @@ show running-config | include nat
 
 Displays lines in the running configuration that contain NAT commands. Useful to confirm that interfaces are properly marked as inside or outside.
 
+<br><br>
 
 ## **4.5 Define an access list on R1 for local addresses**
 
@@ -110,6 +114,8 @@ show running-config | include access-list
 ![](images/Pasted%20image%2020251112195856.png)
 
 Verifies that the access list statement is present in the configuration and ready to be applied to NAT translation.
+
+<br><br>
 
 ## **4.6 NAT and PAT Configuration and Verification**
 
@@ -160,6 +166,8 @@ show ip nat statistics
 #### **Results**
 
 Displays the number of active translations and packet counts, confirming that NAT and PAT are working correctly.
+
+<br><br>
 
 ## 4.7 **Conclusion**
 
